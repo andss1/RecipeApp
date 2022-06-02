@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SplashScreenActivity">
+    tools:context=".ui.activities.SplashScreenActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:paddingStart="@dimen/_20sdp"
             android:paddingEnd="@dimen/_20sdp"
             android:background="@drawable/btn_bg"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:text="Iniciar" />
 
         <ProgressBar

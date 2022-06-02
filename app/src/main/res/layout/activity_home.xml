@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    tools:context=".SplashScreenActivity">
+    tools:context=".ui.activities.SplashScreenActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                 android:id="@+id/rv_main_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
+                android:layout_margin="@dimen/_5sdp"
                 android:orientation="horizontal"
                 tools:itemCount="1"
                 tools:listitem="@layout/item_rv_main_category" />
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
-                android:padding="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
                 android:text="Categorias"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_15ssp" />
@@ -66,7 +66,7 @@
                 android:id="@+id/rv_sub_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
+                android:layout_margin="@dimen/_5sdp"
                 android:orientation="horizontal"
                 tools:itemCount="1"
                 tools:listitem="@layout/item_rv_sub_category" />
