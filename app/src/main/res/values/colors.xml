@@ -5,4 +5,6 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#F5F5F5</color>
+    <color name="hintTextColor">#787878</color>
 </resources>
