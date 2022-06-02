@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,14 +29,14 @@
             android:paddingEnd="@dimen/_20sdp"
             android:background="@drawable/btn_bg"
             android:visibility="invisible"
-            android:text="Iniciar"/>
+            android:text="Iniciar" />
 
         <ProgressBar
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
             android:outlineAmbientShadowColor="@color/brown"
             android:layout_gravity="center"
-            android:id="@+id/loader"/>
+            android:id="@+id/loader" />
     </FrameLayout>
 
 </RelativeLayout>
