@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 
 
-@Entity(tableName = "Recipes")
+@Entity(tableName = "Recipe")
 data class Recipe(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
