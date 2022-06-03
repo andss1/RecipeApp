@@ -9,7 +9,7 @@ import com.example.recipeapp.ui.adapters.MainCategoryAdapter
 import com.example.recipeapp.ui.adapters.SubCategoryAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
 
     var arrMainRecipe = ArrayList<Recipe>()
     var arrSubRecipe = ArrayList<Recipe>()
