@@ -4,24 +4,25 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.recipeapp.dao.RecipeDao
-import com.example.recipeapp.entities.Category
-import com.example.recipeapp.entities.CategoryItems
-import com.example.recipeapp.entities.Recipe
+import com.example.recipeapp.entities.*
 import com.example.recipeapp.entities.converters.CategoryListConverter
+import com.example.recipeapp.entities.converters.MealListConverter
 
 @Database(
-    entities = [Recipe::class, CategoryItems::class, Category::class, CategoryListConverter::class],
+    entities = [Recipe::class, CategoryItems::class, Category::class, MealItems::class, Meal::class],
     version = 1,
     exportSchema = false
 )
+@TypeConverters(CategoryListConverter::class, MealListConverter::class)
 abstract class RecipeDatabase : RoomDatabase() {
     companion object {
         var recipiesDatabase: RecipeDatabase? = null
 
         @Synchronized
         fun getDatabase(context: Context): RecipeDatabase {
-            if (recipiesDatabase != null) {
+            if (recipiesDatabase == null) {
                 recipiesDatabase = Room.databaseBuilder(
                     context,
                     RecipeDatabase::class.java,

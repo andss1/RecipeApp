@@ -3,35 +3,36 @@ package com.example.recipeapp.entities.converters
 import androidx.room.TypeConverter
 import com.example.recipeapp.entities.Category
 import com.example.recipeapp.entities.CategoryItems
+import com.example.recipeapp.entities.MealItems
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class CategoryListConverter {
+class MealListConverter {
     @TypeConverter
-    fun listToJson(category: ArrayList<CategoryItems>): String? {
-        if (category == null) {
+    fun listToJson(meal: ArrayList<MealItems>): String? {
+        if (meal == null) {
             return (null)
         } else {
             val gson = Gson()
-            val type = object : TypeToken<CategoryItems>() {
+            val type = object : TypeToken<MealItems>() {
 
             }.type
 
-            return gson.toJson(category, type)
+            return gson.toJson(meal, type)
         }
     }
 
     @TypeConverter
-    fun toCategoryList(categoryString: String): ArrayList<CategoryItems>? {
-        if (categoryString == null) {
+    fun toCategoryList(mealString: String): ArrayList<MealItems>? {
+        if (mealString == null) {
             return (null)
         } else {
             val gson = Gson()
-            val type = object : TypeToken<CategoryItems>() {
+            val type = object : TypeToken<MealItems>() {
 
             }.type
 
-            return gson.fromJson(categoryString, type)
+            return gson.fromJson(mealString, type)
         }
     }
 

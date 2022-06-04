@@ -25,7 +25,7 @@
                 android:layout_marginRight="-20dp"
                 android:layout_marginTop="-20dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/pizza_img"/>
+                android:src="@drawable/pizza_img" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:maxLines="2"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_bold"
-                android:padding="@dimen/_10sdp"/>
+                android:padding="@dimen/_10sdp" />
 
         </RelativeLayout>
 

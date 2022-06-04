@@ -59,6 +59,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:padding="@dimen/_8sdp"
                 android:text="Categorias"
+                android:id="@+id/tvCategory"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_15ssp" />
 

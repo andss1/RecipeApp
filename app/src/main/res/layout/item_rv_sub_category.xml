@@ -14,19 +14,11 @@
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="@dimen/_5sdp">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/img_dish"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/img_dish"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bg_splashscreen"/>
-
-        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -35,14 +27,14 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tv_dish_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_dish_name"
-            android:text="Pizzas"
-            android:textSize="@dimen/_15ssp"
-            android:maxLines="2"
-            android:textColor="@color/black"
             android:fontFamily="@font/roboto_light"
-            android:paddingStart="@dimen/_10sdp"/>
+            android:maxLines="2"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="Pizzas"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
     </LinearLayout>
 </LinearLayout>

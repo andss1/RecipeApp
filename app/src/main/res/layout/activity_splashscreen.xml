@@ -28,7 +28,7 @@
             android:paddingStart="@dimen/_20sdp"
             android:paddingEnd="@dimen/_20sdp"
             android:background="@drawable/btn_bg"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:text="Iniciar" />
 
         <ProgressBar
