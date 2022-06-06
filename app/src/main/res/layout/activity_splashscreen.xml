@@ -9,34 +9,35 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleY="1.35"
         android:src="@drawable/bg_splashscreen" />
 
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/_120sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:gravity="center">
 
         <Button
+            android:id="@+id/btnGetStarted"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnGetStarted"
-            android:textColor="@color/white"
+            android:background="@drawable/btn_bg"
             android:paddingStart="@dimen/_20sdp"
             android:paddingEnd="@dimen/_20sdp"
-            android:background="@drawable/btn_bg"
-            android:visibility="invisible"
-            android:text="Iniciar" />
+            android:text="Iniciar"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
 
         <ProgressBar
+            android:id="@+id/loader"
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
-            android:outlineAmbientShadowColor="@color/brown"
             android:layout_gravity="center"
-            android:id="@+id/loader" />
+            android:outlineAmbientShadowColor="@color/brown" />
     </FrameLayout>
 
 </RelativeLayout>

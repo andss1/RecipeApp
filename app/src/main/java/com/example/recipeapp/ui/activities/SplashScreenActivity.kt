@@ -29,7 +29,6 @@ class SplashScreenActivity : BaseActivity(), EasyPermissions.RationaleCallbacks,
 
         readStorageTask()
 
-
         btnGetStarted.setOnClickListener {
             var intent = Intent(this@SplashScreenActivity, HomeActivity::class.java)
             startActivity(intent)
@@ -48,7 +47,7 @@ class SplashScreenActivity : BaseActivity(), EasyPermissions.RationaleCallbacks,
                 call: Call<Category>,
                 response: Response<Category>
             ) {
-                for(arr in response.body()!!.categorieitems!!){
+                for (arr in response.body()!!.categorieitems!!) {
                     getMeals(arr.strcategory)
                 }
                 insertDataIntoRoomDb(response.body())
@@ -74,7 +73,7 @@ class SplashScreenActivity : BaseActivity(), EasyPermissions.RationaleCallbacks,
         }
     }
 
-    fun clearDb(){
+    fun clearDb() {
         launch {
             this.let {
                 RecipeDatabase.getDatabase(this@SplashScreenActivity).recipeDao().clearDb()
@@ -101,6 +100,7 @@ class SplashScreenActivity : BaseActivity(), EasyPermissions.RationaleCallbacks,
             }
         })
     }
+
     fun insertMealDataIntoRoomDb(categoryName: String, meal: Meal?) {
         launch {
             this.let {

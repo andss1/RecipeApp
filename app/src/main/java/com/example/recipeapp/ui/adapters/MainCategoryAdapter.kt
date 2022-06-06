@@ -22,7 +22,7 @@ class MainCategoryAdapter : RecyclerView.Adapter<MainCategoryAdapter.RecipeViewH
         arrMainCategory = arrData as ArrayList<CategoryItems>
     }
 
-    fun setClickListener(listener1: OnItemClickListener){
+    fun setClickListener(listener1: OnItemClickListener) {
         listener = listener1
     }
 
@@ -40,7 +40,7 @@ class MainCategoryAdapter : RecyclerView.Adapter<MainCategoryAdapter.RecipeViewH
         Glide.with(ctx!!).load(arrMainCategory[position].strcategorythumb)
             .into(holder.itemView.img_dish)
 
-        holder.itemView.rootView.setOnClickListener{
+        holder.itemView.rootView.setOnClickListener {
             listener!!.onClicked(arrMainCategory[position].strcategory)
         }
     }
@@ -49,7 +49,7 @@ class MainCategoryAdapter : RecyclerView.Adapter<MainCategoryAdapter.RecipeViewH
         return arrMainCategory.size
     }
 
-    interface OnItemClickListener{
+    interface OnItemClickListener {
         fun onClicked(categoryName: String)
     }
 }

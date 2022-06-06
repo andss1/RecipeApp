@@ -1,7 +1,6 @@
 package com.example.recipeapp.entities.converters
 
 import androidx.room.TypeConverter
-import com.example.recipeapp.entities.Category
 import com.example.recipeapp.entities.CategoryItems
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -13,9 +12,7 @@ class CategoryListConverter {
             return (null)
         } else {
             val gson = Gson()
-            val type = object : TypeToken<CategoryItems>() {
-
-            }.type
+            val type = object : TypeToken<CategoryItems>() {}.type
 
             return gson.toJson(category, type)
         }
@@ -27,9 +24,7 @@ class CategoryListConverter {
             return (null)
         } else {
             val gson = Gson()
-            val type = object : TypeToken<CategoryItems>() {
-
-            }.type
+            val type = object : TypeToken<CategoryItems>() {}.type
 
             return gson.fromJson(categoryString, type)
         }

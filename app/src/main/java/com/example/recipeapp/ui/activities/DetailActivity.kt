@@ -28,7 +28,7 @@ class DetailActivity : BaseActivity() {
         var id = intent.getStringExtra("id")
         getSpecificItem(id!!)
 
-        img_toolbar_btn.setOnClickListener{
+        img_toolbar_btn.setOnClickListener {
             finish()
         }
 
@@ -58,30 +58,32 @@ class DetailActivity : BaseActivity() {
                     ).show()
                     scrollview.visibility = View.GONE
                 } else {
-                    Glide.with(this@DetailActivity).load(response.body()!!.mealsEntity[0].strmealthumb)
+                    Glide.with(this@DetailActivity)
+                        .load(response.body()!!.mealsEntity[0].strmealthumb)
                         .into(img_item)
 
                     tvCategory.text = response.body()!!.mealsEntity[0].strmeal
-                    var ingredient = "${response.body()!!.mealsEntity[0].stringredient1}        ${response.body()!!.mealsEntity[0].strmeasure1}\n" +
-                            "${response.body()!!.mealsEntity[0].stringredient2}        ${response.body()!!.mealsEntity[0].strmeasure2}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient3}        ${response.body()!!.mealsEntity[0].strmeasure3}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient4}        ${response.body()!!.mealsEntity[0].strmeasure4}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient5}        ${response.body()!!.mealsEntity[0].strmeasure5}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient6}        ${response.body()!!.mealsEntity[0].strmeasure6}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient7}        ${response.body()!!.mealsEntity[0].strmeasure7}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient8}        ${response.body()!!.mealsEntity[0].strmeasure8}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient9}        ${response.body()!!.mealsEntity[0].strmeasure9}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient10}        ${response.body()!!.mealsEntity[0].strmeasure10}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient11}        ${response.body()!!.mealsEntity[0].strmeasure11}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient12}        ${response.body()!!.mealsEntity[0].strmeasure12}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient13}        ${response.body()!!.mealsEntity[0].strmeasure13}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient14}        ${response.body()!!.mealsEntity[0].strmeasure14}\n" +
-                    "${response.body()!!.mealsEntity[0].stringredient15}        ${response.body()!!.mealsEntity[0].strmeasure15}\n"
+                    var ingredient =
+                        "${response.body()!!.mealsEntity[0].stringredient1}        ${response.body()!!.mealsEntity[0].strmeasure1}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient2}        ${response.body()!!.mealsEntity[0].strmeasure2}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient3}        ${response.body()!!.mealsEntity[0].strmeasure3}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient4}        ${response.body()!!.mealsEntity[0].strmeasure4}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient5}        ${response.body()!!.mealsEntity[0].strmeasure5}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient6}        ${response.body()!!.mealsEntity[0].strmeasure6}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient7}        ${response.body()!!.mealsEntity[0].strmeasure7}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient8}        ${response.body()!!.mealsEntity[0].strmeasure8}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient9}        ${response.body()!!.mealsEntity[0].strmeasure9}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient10}        ${response.body()!!.mealsEntity[0].strmeasure10}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient11}        ${response.body()!!.mealsEntity[0].strmeasure11}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient12}        ${response.body()!!.mealsEntity[0].strmeasure12}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient13}        ${response.body()!!.mealsEntity[0].strmeasure13}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient14}        ${response.body()!!.mealsEntity[0].strmeasure14}\n" +
+                                "${response.body()!!.mealsEntity[0].stringredient15}        ${response.body()!!.mealsEntity[0].strmeasure15}\n"
 
                     tv_ingred.text = ingredient
-                    tv_instruc.text =response.body()!!.mealsEntity[0].strinstructions
+                    tv_instruc.text = response.body()!!.mealsEntity[0].strinstructions
 
-                    if(response.body()!!.mealsEntity[0].stryoutube != null){
+                    if (response.body()!!.mealsEntity[0].stryoutube != null) {
                         ytLink = response.body()!!.mealsEntity[0].stryoutube
                     } else {
                         btnYouTube.visibility = View.GONE

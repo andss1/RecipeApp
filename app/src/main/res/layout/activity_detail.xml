@@ -62,7 +62,7 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
@@ -283,8 +283,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
