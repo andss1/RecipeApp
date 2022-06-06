@@ -15,6 +15,7 @@ class SubCategoryAdapter : RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHol
 
     var arrSubCategory = ArrayList<MealItems>()
     var ctx: Context? = null
+    var listener: SubCategoryAdapter.OnItemClickListener? = null
 
     fun setData(arrData: List<MealItems>) {
         arrSubCategory = arrData as ArrayList<MealItems>
@@ -30,11 +31,24 @@ class SubCategoryAdapter : RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHol
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         holder.itemView.tv_dish_name.text = arrSubCategory[position].strMeal
+
+        holder.itemView.rootView.setOnClickListener {
+            listener!!.onClicked(arrSubCategory[position].idMeal)
+        }
+
         Glide.with(ctx!!).load(arrSubCategory[position].strMealThumb)
             .into(holder.itemView.img_dish)
     }
 
     override fun getItemCount(): Int {
         return arrSubCategory.size
+    }
+
+    fun setClickListener(listener1: SubCategoryAdapter.OnItemClickListener) {
+        listener = listener1
+    }
+
+    interface OnItemClickListener {
+        fun onClicked(mealId: String)
     }
 }

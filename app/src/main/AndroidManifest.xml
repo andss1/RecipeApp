@@ -28,6 +28,10 @@
         <activity
             android:name=".ui.activities.HomeActivity"
             android:screenOrientation="locked" />
+
+        <activity
+            android:name=".ui.activities.DetailActivity"
+            android:screenOrientation="locked" />
     </application>
 
 </manifest>

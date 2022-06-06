@@ -17,7 +17,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_125sdp"
+        android:layout_marginStart="@dimen/_120sdp"
         android:gravity="center">
 
         <Button

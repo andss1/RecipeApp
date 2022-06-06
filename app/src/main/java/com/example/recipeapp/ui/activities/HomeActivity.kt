@@ -1,5 +1,6 @@
 package com.example.recipeapp.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recipeapp.R
@@ -18,9 +19,17 @@ class HomeActivity : BaseActivity() {
     var mainCategoryAdapter = MainCategoryAdapter()
     var subCategoryAdapter = SubCategoryAdapter()
 
-    private val onClicked = object : MainCategoryAdapter.OnItemClickListener {
+    private val onMainItemClicked = object : MainCategoryAdapter.OnItemClickListener {
         override fun onClicked(categoryName: String) {
             getMealDataFromDb(categoryName)
+        }
+    }
+
+    private val onSubItemClicked = object : SubCategoryAdapter.OnItemClickListener {
+        override fun onClicked(mealId: String) {
+            var intent = Intent(this@HomeActivity, DetailActivity::class.java)
+            intent.putExtra("id", mealId)
+            startActivity(intent)
         }
     }
 
@@ -31,7 +40,9 @@ class HomeActivity : BaseActivity() {
 
         getDataFromDb()
 
-        mainCategoryAdapter.setClickListener(onClicked)
+        mainCategoryAdapter.setClickListener(onMainItemClicked)
+
+        subCategoryAdapter.setClickListener(onSubItemClicked)
 
 
         rv_sub_category.layoutManager =
